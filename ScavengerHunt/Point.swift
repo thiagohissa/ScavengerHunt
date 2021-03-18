@@ -13,9 +13,9 @@ class Point: NSObject {
     public var address: String;
     public var task: String;
     public var tags: String;
-    public var rating: Int;
+    public var rating: Double;
     
-    init(name: String, address: String, task: String, tags: String, rating: Int) {
+    init(name: String, address: String, task: String, tags: String, rating: Double) {
         self.name = name;
         self.address = address;
         self.task = task;
