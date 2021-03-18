@@ -19,6 +19,10 @@ class AddVC: UIViewController {
     }
 
     @IBAction func clearTapped(_ sender: Any) {
+        self.pointName.text = "";
+        self.pointAddress.text = "";
+        self.pointTask.text = "";
+        self.pointTags.text = ""
     }
     
     @IBAction func addTapped(_ sender: Any) {
@@ -28,7 +32,7 @@ class AddVC: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
         let point = Point.init(name: self.pointName.text!, address: self.pointAddress.text!, task: self.pointTask.text!, tags: self.pointTags.text!,rating: 0);
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PointAdded"), object: nil, userInfo: ["point":point]);
+        PointsManager.addPoint(point: point);
     }
     
 }

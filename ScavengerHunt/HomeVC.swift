@@ -23,10 +23,18 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.points = [point1, point2, point3, point4, point5];
-        NotificationCenter.default.addObserver(
-            self, selector: #selector(self.pointAdded), name: NSNotification.Name(rawValue: "PointAdded"), object: nil
-        )
+        PointsManager.addPoint(point: point1);
+        PointsManager.addPoint(point: point2);
+        PointsManager.addPoint(point: point3);
+        PointsManager.addPoint(point: point4);
+        PointsManager.addPoint(point: point5);
+        self.points = PointsManager.points;
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        self.points = PointsManager.points;
+        self.tableView.reloadData();
     }
     
     @objc func pointAdded(_ notification: NSNotification) -> Void{
