@@ -15,6 +15,7 @@ class EmailVC: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var message: UITextView!
     var point: Point!
+    var member: TeamMember?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +24,18 @@ class EmailVC: UIViewController, MFMailComposeViewControllerDelegate {
 
     func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
+            var body: String!
+            if((member) != nil){
+                body = self.message.text!
+            }
+            else{
+                body = "<p>\(self.message.text!)</p> <p>A Point was shared with you:</p><p>\(point.name)</p><p>\(point.address)</p><p>\(point.task)</p><p>\(point.tags)</p><p>\(point.rating)</p>"
+            }
+            
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setToRecipients([self.email.text!])
-            mail.setMessageBody("<p>\(self.message.text!)</p> <p>A Point was shared with you:</p><p>\(point.name)</p><p>\(point.address)</p><p>\(point.task)</p><p>\(point.tags)</p><p>\(point.rating)</p>", isHTML: true)
+            mail.setMessageBody(body, isHTML: true)
 
             present(mail, animated: true)
         } else {
