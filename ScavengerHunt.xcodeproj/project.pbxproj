@@ -64,6 +64,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E5DEAE22603C8F600CCFB65 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				7E8334172602B17600FA2384 /* PointDetailsVC.swift */,
+				7E8334132602A22B00FA2384 /* HomeVC.swift */,
+				7E1515092603842100683535 /* SearchVC.swift */,
+				7E749D7826039C3D00A197B4 /* EmailVC.swift */,
+				7E83341B2602BBC000FA2384 /* AddVC.swift */,
+				7E749D7A2603A3CA00A197B4 /* AboutVC.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		7E5DEAE32603C91800CCFB65 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7E8334152602A44300FA2384 /* PointCell.swift */,
+				7E5DEAE02603A67800CCFB65 /* AboutCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7E5DEAE42603C93600CCFB65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E749D7C2603A43000A197B4 /* TeamMember.swift */,
+				7E749D7E2603A48A00A197B4 /* TeamMembersManager.swift */,
+				7E8334192602B20A00FA2384 /* Point.swift */,
+				7E15150726037F6C00683535 /* PointsManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7E8333F12602A1AF00FA2384 = {
 			isa = PBXGroup;
 			children = (
@@ -85,24 +118,15 @@
 		7E8333FC2602A1AF00FA2384 /* ScavengerHunt */ = {
 			isa = PBXGroup;
 			children = (
+				7E5DEAE42603C93600CCFB65 /* Model */,
+				7E5DEAE32603C91800CCFB65 /* Cells */,
+				7E5DEAE22603C8F600CCFB65 /* VCs */,
 				7E8333FD2602A1AF00FA2384 /* AppDelegate.swift */,
 				7E8333FF2602A1AF00FA2384 /* SceneDelegate.swift */,
 				7E8334032602A1AF00FA2384 /* Main.storyboard */,
-				7E8334192602B20A00FA2384 /* Point.swift */,
-				7E8334062602A1B100FA2384 /* Assets.xcassets */,
 				7E8334082602A1B100FA2384 /* LaunchScreen.storyboard */,
+				7E8334062602A1B100FA2384 /* Assets.xcassets */,
 				7E83340B2602A1B100FA2384 /* Info.plist */,
-				7E8334132602A22B00FA2384 /* HomeVC.swift */,
-				7E1515092603842100683535 /* SearchVC.swift */,
-				7E8334152602A44300FA2384 /* PointCell.swift */,
-				7E8334172602B17600FA2384 /* PointDetailsVC.swift */,
-				7E749D7826039C3D00A197B4 /* EmailVC.swift */,
-				7E83341B2602BBC000FA2384 /* AddVC.swift */,
-				7E749D7A2603A3CA00A197B4 /* AboutVC.swift */,
-				7E5DEAE02603A67800CCFB65 /* AboutCell.swift */,
-				7E749D7C2603A43000A197B4 /* TeamMember.swift */,
-				7E749D7E2603A48A00A197B4 /* TeamMembersManager.swift */,
-				7E15150726037F6C00683535 /* PointsManager.swift */,
 			);
 			path = ScavengerHunt;
 			sourceTree = "<group>";
