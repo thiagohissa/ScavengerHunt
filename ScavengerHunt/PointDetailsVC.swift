@@ -44,15 +44,25 @@ class PointDetailsVC: UIViewController {
     }
     
     @IBAction func locationTapped(_ sender: UIButton) {
+        
     }
     
     @IBAction func shareTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "ShareSegue", sender: nil)
     }
     
     @IBAction func deleteTapped(_ sender: UIButton) {
         PointsManager.deletePoint(name: point.name)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PointDeleted"), object: nil, userInfo: nil);
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: -Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ShareSegue"){
+            let destination = segue.destination as! EmailVC;
+            destination.point = self.point;
+        }
     }
     
 
