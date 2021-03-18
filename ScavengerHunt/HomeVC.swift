@@ -29,19 +29,18 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         PointsManager.addPoint(point: point4);
         PointsManager.addPoint(point: point5);
         self.points = PointsManager.points;
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(self.viewWillAppear(_:)), name: NSNotification.Name(rawValue: "PointEdited"), object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(self.viewWillAppear(_:)), name: NSNotification.Name(rawValue: "PointDeleted"), object: nil
+        )
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         self.points = PointsManager.points;
         self.tableView.reloadData();
-    }
-    
-    @objc func pointAdded(_ notification: NSNotification) -> Void{
-        if let point = notification.userInfo?["point"] as? Point {
-            self.points.append(point);
-            self.tableView.reloadData();
-        }
     }
     
     // MARK: -TableView

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E15150826037F6C00683535 /* PointsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E15150726037F6C00683535 /* PointsManager.swift */; };
+		7E15150A2603842100683535 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1515092603842100683535 /* SearchVC.swift */; };
 		7E8333FE2602A1AF00FA2384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8333FD2602A1AF00FA2384 /* AppDelegate.swift */; };
 		7E8334002602A1AF00FA2384 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8333FF2602A1AF00FA2384 /* SceneDelegate.swift */; };
 		7E8334052602A1AF00FA2384 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E8334032602A1AF00FA2384 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		7E15150726037F6C00683535 /* PointsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsManager.swift; sourceTree = "<group>"; };
+		7E1515092603842100683535 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		7E8333FA2602A1AF00FA2384 /* ScavengerHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScavengerHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8333FD2602A1AF00FA2384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E8333FF2602A1AF00FA2384 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				7E8334082602A1B100FA2384 /* LaunchScreen.storyboard */,
 				7E83340B2602A1B100FA2384 /* Info.plist */,
 				7E8334132602A22B00FA2384 /* HomeVC.swift */,
+				7E1515092603842100683535 /* SearchVC.swift */,
 				7E8334152602A44300FA2384 /* PointCell.swift */,
 				7E8334172602B17600FA2384 /* PointDetailsVC.swift */,
 				7E83341B2602BBC000FA2384 /* AddVC.swift */,
@@ -156,6 +159,7 @@
 				7E8334182602B17600FA2384 /* PointDetailsVC.swift in Sources */,
 				7E8334162602A44300FA2384 /* PointCell.swift in Sources */,
 				7E83341A2602B20A00FA2384 /* Point.swift in Sources */,
+				7E15150A2603842100683535 /* SearchVC.swift in Sources */,
 				7E8334142602A22B00FA2384 /* HomeVC.swift in Sources */,
 				7E8333FE2602A1AF00FA2384 /* AppDelegate.swift in Sources */,
 				7E83341C2602BBC000FA2384 /* AddVC.swift in Sources */,
